@@ -1,13 +1,14 @@
 const express = require('express');
 const mysql = require('mysql');
+const deet = require('./deets');
 let lang = 'Python'
 
 //Connecting database
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'tippy123',
-    database: 'sysdev_recruitment'
+    host: deet.host,
+    user: deet.user,
+    password: deet.pass,
+    database: deet.db
 });
 
 db.connect((error) => {
